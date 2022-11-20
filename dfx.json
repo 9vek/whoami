@@ -1,0 +1,36 @@
+{
+  "canisters": {
+    "whoami_backend": {
+      "candid": "src/whoami_backend/whoami_backend.did",
+      "package": "whoami_backend",
+      "type": "rust"
+    },
+    "whoami_frontend": {
+      "dependencies": [
+        "whoami_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/whoami_frontend/src/index.html"
+      },
+      "source": [
+        "src/whoami_frontend/assets",
+        "dist/whoami_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.11.2",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
