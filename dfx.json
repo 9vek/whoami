@@ -1,5 +1,17 @@
 {
   "canisters": {
+    "internet_identity": {
+      "type": "custom",
+      "candid": "internet_identity.did",
+      "wasm": "internet_identity.wasm",
+      "build": "bash -c 'test -f internet_identity.wasm || curl -sSL https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm -o internet_identity.wasm; test -f internet_identity.did || curl -sSL https://raw.githubusercontent.com/dfinity/internet-identity/main/src/internet_identity/internet_identity.did -o internet_identity.did'",
+      "remote": {
+        "candid": "internet_identity.did",
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      }
+    },
     "whoami_backend": {
       "candid": "src/whoami_backend/whoami_backend.did",
       "package": "whoami_backend",
@@ -7,7 +19,7 @@
     },
     "whoami_frontend": {
       "dependencies": [
-        "whoami_backend"
+        "whoami_backend", "internet_identity"
       ],
       "frontend": {
         "entrypoint": "src/whoami_frontend/src/index.html"
