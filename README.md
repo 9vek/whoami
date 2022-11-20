@@ -1,6 +1,30 @@
 # whoami
 
-Welcome to your new whoami project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
+This is a `whoami` example intended to demonstrate how an Internet Computer developer might integrate with the [Internet Identity](https://identity.ic0.app/).
+
+This demo is inspired by the [krpeacock/auth-client-demo)](https://github.com/krpeacock/auth-client-demo), and the code in this demo can serve as a complement to it. You may learn from this demo if your project is:
+
+- create from the `dfx new` command with a two canisters (front-end & back-end) structure. 
+- using `Rust` as back-end language
+- intended to integrate the `React` framework
+- intended to integrate `Tailwind CSS`
+- having some errors when following other tutorials
+
+## Running the project locally
+
+Clone the project and use the following commands:
+
+```bash
+# Starts the replica, running in the background
+dfx start --background
+
+# Deploys your canisters to the replica and generates your candid interface
+dfx deploy
+```
+
+Once the job completes, you can see the urls for each of the canisters in your console. 
+
+## DFX Default README
 
 To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
 
@@ -22,16 +46,3 @@ dfx help
 dfx canister --help
 ```
 
-## Running the project locally
-
-If you want to test your project locally, you can use the following commands:
-
-```bash
-# Starts the replica, running in the background
-dfx start --background
-
-# Deploys your canisters to the replica and generates your candid interface
-dfx deploy
-```
-
-Once the job completes, your application will be available at `http://localhost:8000?canisterId={asset_canister_id}`.
