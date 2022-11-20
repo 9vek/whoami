@@ -1,4 +1,7 @@
+use candid::Principal;
+use ic_cdk::caller;
+
 #[ic_cdk_macros::query]
-fn greet(name: String) -> String {
-    format!("Hello, {}!", name)
+fn whoami() -> Principal {
+    caller()
 }
