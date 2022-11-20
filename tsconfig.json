@@ -5,5 +5,5 @@
     "allowJs": true,
     "jsx": "react",
   },
-  "include": ["./src/fyp_frontend/**/*"],
+  "include": ["./src/whoami_frontend/src/**/*"],
 }
