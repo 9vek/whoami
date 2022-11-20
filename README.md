@@ -1,6 +1,6 @@
 # whoami
 
-This is a `whoami` example intended to demonstrate how an Internet Computer developer might integrate with the [Internet Identity](https://identity.ic0.app/).
+This is a `whoami` example intended to demonstrate how an Internet Computer developer might integrate with the [dfinity/internet-identity](https://github.com/dfinity/internet-identity). The demo is currently focus on showing how to test the `internet_identity` canister functions in a local environment. 
 
 This demo is inspired by the [krpeacock/auth-client-demo)](https://github.com/krpeacock/auth-client-demo), and the code in this demo can serve as a complement to it. You may learn from this demo if your project is:
 
